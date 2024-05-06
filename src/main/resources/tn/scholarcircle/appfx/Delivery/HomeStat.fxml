@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="487.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.scholarcircle.appfx.controllers.Delivery.HomeStat">
+   <children>
+      <BarChart fx:id="StatDelivery" layoutX="256.0" layoutY="89.0" title="Temporal analysis of delivery Fees and quantities">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxis" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <AnchorPane layoutX="202.0" layoutY="14.0" prefHeight="71.0" prefWidth="442.0">
+         <children>
+            <Label layoutX="6.0" layoutY="-6.0" prefHeight="18.0" prefWidth="234.0" text="Service Delivery " textFill="#840085">
+               <font>
+                  <Font name="Malgun Gothic Semilight" size="29.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="117.0" layoutY="29.0" startX="-98.79998779296875" />
+            <Label layoutX="204.0" layoutY="22.0" prefHeight="28.0" prefWidth="99.0" text="statistics">
+               <font>
+                  <Font name="Ink Free" size="21.0" />
+               </font>
+            </Label>
+            <Line endX="35.4000244140625" endY="7.62939453125E-6" layoutX="257.0" layoutY="50.0" startX="-53.0" startY="7.62939453125E-6" stroke="#840085" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="5.0" prefHeight="473.0" prefWidth="202.0">
+         <children>
+            <Line endX="-100.00001525878906" endY="280.79998779296875" layoutX="299.0" layoutY="223.0" startX="-99.99998474121094" startY="-223.0" />
+            <ImageView fitHeight="136.0" fitWidth="245.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Picture/Logo.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="13.0" layoutY="166.0" prefHeight="310.0" prefWidth="175.0" style="-fx-background-color: #56483C;">
+               <children>
+                  <Circle layoutX="90.0" layoutY="73.0" radius="75.0" stroke="MAROON" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.800000011920929" green="0.47111111879348755" blue="0.14222222566604614" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.06729475100942127">
+                                 <color>
+                                    <Color red="0.800000011920929" green="0.47111111879348755" blue="0.14222222566604614" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.25975773889636616">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.35127860026917895">
+                                 <color>
+                                    <Color red="0.8039215803146362" green="0.7333333492279053" blue="0.658823549747467" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <AnchorPane layoutX="15.0" layoutY="51.0" prefHeight="250.0" prefWidth="150.0" style="-fx-background-color: #CDBBA8; -fx-border-color: #800000;">
+                     <children>
+                        <Button layoutX="5.0" layoutY="57.0" mnemonicParsing="false" onAction="#AddDV" prefHeight="27.0" prefWidth="139.0" style="-fx-background-color: #000000; -fx-border-color: #f3f6f4;" text="Add " textFill="#c7d7c6">
+                           <font>
+                              <Font name="Consolas Bold Italic" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="5.0" layoutY="14.0" mnemonicParsing="false" onAction="#HomePage" prefHeight="27.0" prefWidth="139.0" style="-fx-background-color: #000000; -fx-border-color: #f3f6f4;" text="Home" textFill="#c7d7c6">
+                           <font>
+                              <Font name="Consolas Bold Italic" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="3.0" layoutY="133.0" mnemonicParsing="false" onAction="#Validationbtn" prefHeight="29.0" prefWidth="139.0" style="-fx-background-color: #000000; -fx-border-color: #f3f6f4;" text="Information P.D" textFill="#c7d7c6">
+                           <font>
+                              <Font name="Consolas Bold Italic" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="3.0" layoutY="189.0" mnemonicParsing="false" onAction="#ServicePersonDelivery" prefHeight="43.0" prefWidth="139.0" style="-fx-background-color: #990000; -fx-border-color: #f3f6f4;" text="Person Delivery" textFill="#c7d7c6">
+                           <font>
+                              <Font name="Consolas Bold Italic" size="13.0" />
+                           </font>
+                        </Button>
+                        <Line endX="41.39997863769531" endY="-3.0517578125E-5" layoutX="104.0" layoutY="179.0" startX="-100.0" />
+                        <Button layoutX="5.0" layoutY="96.0" mnemonicParsing="false" onAction="#UpdSupDv" prefHeight="27.0" prefWidth="139.0" style="-fx-background-color: #000000; -fx-border-color: #f3f6f4;" text="Upd/Sup" textFill="#c7d7c6">
+                           <font>
+                              <Font name="Consolas Bold Italic" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="38.0" prefHeight="56.0" prefWidth="100.0" text="Delivery">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.018089668825268745" green="0.6105263233184814" blue="0.12670305371284485" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.00839999970048666" green="0.14000000059604645" blue="0.03829390928149223" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

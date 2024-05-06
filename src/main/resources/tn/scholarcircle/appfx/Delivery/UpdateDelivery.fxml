@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="542.0" prefWidth="882.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.scholarcircle.appfx.controllers.Delivery.UpdateDelivery">
+   <children>
+      <TableView fx:id="TableViewUP" layoutX="221.0" layoutY="100.0" prefHeight="286.0" prefWidth="646.0">
+        <columns>
+          <TableColumn fx:id="DateColl" prefWidth="75.0" text="Date" />
+          <TableColumn fx:id="AddressColl" prefWidth="86.4000244140625" text="Address" />
+            <TableColumn fx:id="CustomerColl" prefWidth="92.79998779296875" text="Customer" />
+            <TableColumn fx:id="StatusColl" prefWidth="107.199951171875" text="Status" />
+            <TableColumn fx:id="QuantityColl" prefWidth="68.800048828125" text="Quantity" />
+            <TableColumn fx:id="FeesColl" prefWidth="64.79998779296875" text="Fees" />
+            <TableColumn fx:id="PersonDeliveryColl" prefWidth="150.4000244140625" text="PersonDelivery" />
+        </columns>
+      </TableView>
+      <AnchorPane prefHeight="524.0" prefWidth="202.0">
+         <children>
+            <Line endX="-99.99998474121094" endY="323.70001220703125" layoutX="299.0" layoutY="223.0" startX="-99.99998474121094" startY="-223.0" />
+            <ImageView fitHeight="136.0" fitWidth="245.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Picture/Logo.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="12.0" layoutY="167.0" prefHeight="310.0" prefWidth="175.0" style="-fx-background-color: #56483C;">
+               <children>
+                  <Circle layoutX="90.0" layoutY="73.0" radius="75.0" stroke="MAROON" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.800000011920929" green="0.47111111879348755" blue="0.14222222566604614" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.06729475100942127">
+                                 <color>
+                                    <Color red="0.800000011920929" green="0.47111111879348755" blue="0.14222222566604614" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.25975773889636616">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.35127860026917895">
+                                 <color>
+                                    <Color red="0.8039215803146362" green="0.7333333492279053" blue="0.658823549747467" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <AnchorPane layoutX="15.0" layoutY="51.0" prefHeight="250.0" prefWidth="150.0" style="-fx-background-color: #CDBBA8; -fx-border-color: #800000;">
+                     <children>
+                        <Button layoutX="5.0" layoutY="14.0" mnemonicParsing="false" onAction="#HomePage" prefHeight="27.0" prefWidth="139.0" style="-fx-background-color: #000000; -fx-border-color: #f3f6f4;" text="Home" textFill="#c7d7c6">
+                           <font>
+                              <Font name="Consolas Bold Italic" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="3.0" layoutY="133.0" mnemonicParsing="false" onAction="#Validationbtn" prefHeight="29.0" prefWidth="139.0" style="-fx-background-color: #000000; -fx-border-color: #f3f6f4;" text="P.D &lt;&gt; D.V" textFill="#c7d7c6">
+                           <font>
+                              <Font name="Consolas Bold Italic" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="3.0" layoutY="189.0" mnemonicParsing="false" onAction="#ServicePersonDelivery" prefHeight="43.0" prefWidth="139.0" style="-fx-background-color: #990000; -fx-border-color: #f3f6f4;" text="Person Delivery" textFill="#c7d7c6">
+                           <font>
+                              <Font name="Consolas Bold Italic" size="13.0" />
+                           </font>
+                        </Button>
+                        <Line endX="41.39997863769531" endY="-3.0517578125E-5" layoutX="104.0" layoutY="179.0" startX="-100.0" />
+                        <Button layoutX="5.0" layoutY="93.0" mnemonicParsing="false" onAction="#UpdSupDv" prefHeight="12.0" prefWidth="139.0" style="-fx-background-color: #00c4a9; -fx-border-color: #990000;" text="Upd/Sup" textFill="WHITE">
+                           <font>
+                              <Font name="Consolas Bold Italic" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="5.0" layoutY="53.0" mnemonicParsing="false" onAction="#AddDV" prefHeight="27.0" prefWidth="139.0" style="-fx-background-color: #000000; -fx-border-color: #f3f6f4;" text="Add " textFill="#c7d7c6">
+                           <font>
+                              <Font name="Consolas Bold Italic" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="38.0" prefHeight="56.0" prefWidth="100.0" text="Delivery">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.018089668825268745" green="0.6105263233184814" blue="0.12670305371284485" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.00839999970048666" green="0.14000000059604645" blue="0.03829390928149223" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="202.0" layoutY="14.0" prefHeight="71.0" prefWidth="318.0">
+         <children>
+            <Label layoutX="6.0" layoutY="-6.0" prefHeight="18.0" prefWidth="234.0" text="Service Delivery " textFill="#840085">
+               <font>
+                  <Font name="Malgun Gothic Semilight" size="29.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="117.0" layoutY="29.0" startX="-98.79998779296875" />
+            <Label layoutX="187.0" layoutY="22.0" prefHeight="28.0" prefWidth="274.0" text="modify delivery information">
+               <font>
+                  <Font name="Ink Free" size="21.0" />
+               </font>
+            </Label>
+            <Line endX="166.5999755859375" layoutX="257.0" layoutY="50.0" startX="-69.0" stroke="#840085" />
+         </children>
+      </AnchorPane>
+      <ChoiceBox fx:id="choicPage" layoutX="718.0" layoutY="25.0" onAction="#handleChoiceChange" prefWidth="150.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Delivery" />
+               <String fx:value="PersonDelivery" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+
+      <AnchorPane layoutX="221.0" layoutY="394.0" prefHeight="120.0" prefWidth="190.0">
+         <children>
+            <DatePicker fx:id="DateTF" layoutY="7.0" onAction="#CetteDate" promptText="Date" />
+            <ChoiceBox fx:id="StatusTF" layoutY="51.0" prefWidth="150.0" />
+            <ChoiceBox fx:id="NamePDeliveryChoiceBox" layoutY="89.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="441.0" layoutY="398.0" prefHeight="80.0" prefWidth="184.0">
+         <children>
+            <TextField fx:id="AddressTF" layoutY="1.0" promptText="Address" />
+            <TextField fx:id="QuantityTF" layoutY="47.0" promptText="Quantity" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="643.0" layoutY="398.0" prefHeight="80.0" prefWidth="184.0">
+         <children>
+            <TextField fx:id="CustomerTF" layoutX="-1.0" layoutY="-1.0" promptText="Customer" />
+            <TextField fx:id="FeesTF" layoutX="-1.0" layoutY="47.0" prefHeight="26.0" prefWidth="150.0" promptText="Fees" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="441.0" layoutY="489.0" mnemonicParsing="false" onAction="#UpdateDelivery" prefHeight="43.0" prefWidth="139.0" style="-fx-background-color: #008080; -fx-border-color: #f3f6f4;" text="Upadate " textFill="#c7d7c6">
+         <font>
+            <Font name="Consolas Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="643.0" layoutY="489.0" mnemonicParsing="false" onAction="#DeleteDelivery" prefHeight="43.0" prefWidth="139.0" style="-fx-background-color: #990000; -fx-border-color: #f3f6f4;" text="Delete" textFill="#c7d7c6">
+         <font>
+            <Font name="Consolas Bold Italic" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
